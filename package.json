@@ -1,0 +1,31 @@
+{
+  "name": "servicify-pigato",
+  "version": "0.1.0",
+  "description": "Pigato backend to servicify",
+  "main": "index.js",
+  "scripts": {
+    "test": "blue-tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allain/servicify-pigato"
+  },
+  "keywords": [
+    "servicify",
+    "pigato"
+  ],
+  "author": "Allain Lalonde <allain.lalonde@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allain/servicify-pigato/issues"
+  },
+  "homepage": "https://github.com/allain/servicify-pigato#readme",
+  "dependencies": {
+    "native-promise-only": "0.8.1",
+    "pigato": "git@github.com:prdn/pigato.git#master"
+  },
+  "devDependencies": {
+    "blue-tape": "0.1.10",
+    "promise-identity": "1.1.1"
+  }
+}
