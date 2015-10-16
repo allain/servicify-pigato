@@ -26,6 +26,7 @@
     "pigato": "git@github.com:prdn/pigato.git#master"
   },
   "devDependencies": {
+    "servicify": "git@github.com:allain/servicify.git#gut",
     "blue-tape": "0.1.10",
     "promise-identity": "1.1.1"
   }
