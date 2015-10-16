@@ -1,6 +1,8 @@
+var Promise = require('native-promise-only');
+
 var Client = require('pigato').Client;
 var Broker = require('pigato').Broker;
-var Worker = require('pigato').Worker
+var Worker = require('pigato').Worker;
 
 module.exports = function(servicifyOptions) {
   function listen(opts) {

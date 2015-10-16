@@ -4,7 +4,8 @@
   "description": "Pigato backend to servicify",
   "main": "index.js",
   "scripts": {
-    "test": "blue-tape test/*.js"
+    "test": "blue-tape test/*.js",
+    "lint": "eslint --config .eslintrc index.js test/*.js lib/*.js"
   },
   "repository": {
     "type": "git",
