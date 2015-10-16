@@ -13,9 +13,7 @@ module.exports = function(servicifyOptions) {
         console.error(err);
       });
 
-      return {
-        stop: stop.bind(null, broker)
-      };
+      return stop.bind(null, broker);
     });
   }
 
@@ -35,14 +33,7 @@ module.exports = function(servicifyOptions) {
     });
 
     return start(worker).then(function () {
-      return {
-        invoke: function () {
-          return invoke([].slice.call(arguments));
-        },
-        stop: function () {
-          return stop(worker);
-        }
-      };
+      return stop.bind(null, worker);
     });
   }
 
