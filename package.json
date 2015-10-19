@@ -23,11 +23,13 @@
   "homepage": "https://github.com/allain/servicify-pigato#readme",
   "dependencies": {
     "native-promise-only": "0.8.1",
-    "pigato": "git@github.com:prdn/pigato.git#master"
+    "object-assign": "^4.0.1",
+    "pigato": "git@github.com:prdn/pigato.git#master",
+    "servicify": "^0.9.1"
   },
   "devDependencies": {
-    "servicify": "git@github.com:allain/servicify.git#gut",
     "blue-tape": "0.1.10",
+    "is-promise": "^2.1.0",
     "promise-identity": "1.1.1"
   }
 }

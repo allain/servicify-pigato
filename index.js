@@ -4,8 +4,17 @@ var Client = require('pigato').Client;
 var Broker = require('pigato').Broker;
 var Worker = require('pigato').Worker;
 
+var objectAssign = require('object-assign');
+
 module.exports = function(servicifyOptions) {
+  servicifyOptions = objectAssign({
+    host: '127.0.0.1',
+    port: 2020
+  }, servicifyOptions);
+
   function listen(opts) {
+    opts = Object.assign({}, servicifyOptions, opts);
+
     var brokerAddress = 'tcp://' + opts.host + ':' + opts.port;
 
     return start(new Broker(brokerAddress)).then(function (broker) {
@@ -37,7 +46,7 @@ module.exports = function(servicifyOptions) {
     });
   }
 
-  function request(spec, args, requestOptions) {
+  function dispatch(spec, args, requestOptions) {
     var opts = Object.assign({}, servicifyOptions, requestOptions, {
       timeout: 10000
     });
@@ -63,7 +72,7 @@ module.exports = function(servicifyOptions) {
   return {
     listen: listen,
     offer: offer,
-    request: request,
+    dispatch: dispatch,
     name: 'pigato'
   };
 };
