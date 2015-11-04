@@ -46,7 +46,7 @@ module.exports = function(servicifyOptions) {
     });
   }
 
-  function dispatch(spec, args, requestOptions) {
+  function call(spec, args, requestOptions) {
     var opts = Object.assign({}, servicifyOptions, requestOptions, {
       timeout: 10000
     });
@@ -72,7 +72,7 @@ module.exports = function(servicifyOptions) {
   return {
     listen: listen,
     offer: offer,
-    dispatch: dispatch,
+    call: call,
     name: 'pigato'
   };
 };

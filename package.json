@@ -22,14 +22,14 @@
   },
   "homepage": "https://github.com/allain/servicify-pigato#readme",
   "dependencies": {
-    "native-promise-only": "0.8.1",
+    "native-promise-only": "^0.8.1",
     "object-assign": "^4.0.1",
-    "pigato": "git@github.com:prdn/pigato.git#master",
-    "servicify": "^0.9.1"
+    "pigato": "git+ssh://git@github.com/prdn/pigato.git#master"
   },
   "devDependencies": {
     "blue-tape": "0.1.10",
     "is-promise": "^2.1.0",
-    "promise-identity": "1.1.1"
+    "promise-identity": "^1.1.1",
+    "servicify": "^1.0.2"
   }
 }
