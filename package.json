@@ -24,7 +24,7 @@
   "dependencies": {
     "native-promise-only": "^0.8.1",
     "object-assign": "^4.0.1",
-    "pigato": "git+ssh://git@github.com/prdn/pigato.git#master"
+    "pigato": "0.0.43"
   },
   "devDependencies": {
     "blue-tape": "0.1.10",
