@@ -13,7 +13,7 @@ module.exports = function(servicifyOptions) {
   }, servicifyOptions);
 
   function listen(opts) {
-    opts = Object.assign({}, servicifyOptions, opts);
+    opts = objectAssign({}, servicifyOptions, opts);
 
     var brokerAddress = 'tcp://' + opts.host + ':' + opts.port;
 
@@ -47,7 +47,7 @@ module.exports = function(servicifyOptions) {
   }
 
   function call(spec, args, requestOptions) {
-    var opts = Object.assign({}, servicifyOptions, requestOptions, {
+    var opts = objectAssign({}, servicifyOptions, requestOptions, {
       timeout: 10000
     });
 
@@ -75,6 +75,11 @@ module.exports = function(servicifyOptions) {
     call: call,
     name: 'pigato'
   };
+};
+
+module.exports.defaults = {
+  host: '0.0.0.0',
+  port: 2020
 };
 
 function start(startable) {

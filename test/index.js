@@ -49,3 +49,13 @@ test('supports the full lifecycle', function (t) {
     }).then(server.stop);
   });
 });
+
+
+test('has defaults', function(t) {
+  var driver = require('..');
+  t.ok(driver.defaults, 'has defaults');
+  t.ok(typeof driver.defaults === 'object');
+  t.equal(driver.defaults.host, '0.0.0.0');
+  t.equal(driver.defaults.port, 2020);
+  t.end();
+});
