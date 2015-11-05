@@ -1,6 +1,6 @@
 {
   "name": "servicify-pigato",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pigato backend to servicify",
   "main": "index.js",
   "scripts": {
